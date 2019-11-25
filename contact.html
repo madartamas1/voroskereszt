@@ -17,22 +17,21 @@
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/kapcsolat.js"></script>
   </head>
   <body>
-    
+
 
 
     <header role="banner">
-      <div class="top-bar">
+      <div class="top-bar" style="background:red">
         <div class="container">
           <div class="row">
             <div class="col-9 social">
-              <a href="#"><span class="fa fa-twitter"></span></a>
-              <a href="#"><span class="fa fa-facebook"></span></a>
-              <a href="#"><span class="fa fa-instagram"></span></a>
-              <a href="#"><span class="fa fa-youtube-play"></span></a>
-              <a href="#"><span class="fa fa-vimeo"></span></a>
-              <a href="#"><span class="fa fa-snapchat"></span></a>
+              <a href="https://twitter.com/mvoroskereszt"><span class="fa fa-twitter"></span></a>
+              <a href="https://www.facebook.com/magyarvoroskereszt"><span class="fa fa-facebook"></span></a>
+              <a href="https://www.instagram.com/voroskereszt_hunredcross/"><span class="fa fa-instagram"></span></a>
+              <a href="https://www.youtube.com/user/HungarianRedCross/"><span class="fa fa-youtube-play"></span></a>
             </div>
             <div class="col-3 search-top">
               <!-- <a href="#"><span class="fa fa-search"></span></a> -->
@@ -49,51 +48,50 @@
         <div class="row pt-5">
           <div class="col-12 text-center">
             <a class="absolute-toggle d-block d-md-none" data-toggle="collapse" href="#navbarMenu" role="button" aria-expanded="false" aria-controls="navbarMenu"><span class="burger-lines"></span></a>
-            <h1 class="site-logo"><a href="index.html">Balita</a></h1>
+            <h1 class="site-logo"><a href="index.html">MAGYAR VÖRÖSKERESZT</a></h1>
           </div>
         </div>
       </div>
-      
+
       <nav class="navbar navbar-expand-md  navbar-light bg-light">
         <div class="container">
-          
-         
+
+
           <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link active" href="index.html">Kezdőlap</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="category.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Travel</a>
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Adományozás</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="category.html">Asia</a>
-                  <a class="dropdown-item" href="category.html">Europe</a>
-                  <a class="dropdown-item" href="category.html">Dubai</a>
-                  <a class="dropdown-item" href="category.html">Africa</a>
-                  <a class="dropdown-item" href="category.html">South America</a>
+                  <a class="dropdown-item" href="kampany_tamogat.html">Kampány támogatása</a>
+                  <a class="dropdown-item" href="#">Szervezet támogatása</a>
+                  <a class="dropdown-item" href="#">Adományvonal</a>
                 </div>
 
               </li>
 
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="category.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown05">
-                  <a class="dropdown-item" href="category.html">Lifestyle</a>
-                  <a class="dropdown-item" href="category.html">Food</a>
-                  <a class="dropdown-item" href="category.html">Adventure</a>
-                  <a class="dropdown-item" href="category.html">Travel</a>
-                  <a class="dropdown-item" href="category.html">Business</a>
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Katasztrófák</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <a class="dropdown-item" href="segitseg.html">Miben segíthetünk?</a>
+                  <a class="dropdown-item" href="#">Rehabilitáció</a>
+                  <a class="dropdown-item" href="#">Katasztrófa-válaszadás</a>
                 </div>
 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="mediat.php">Médiatár</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="contact.html">Contact</a>
+                <a class="nav-link" href="mediat_feltolt.php">Képek feltöltése</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Kapcsolat</a>
               </li>
             </ul>
-            
+
           </div>
         </div
       </nav>
@@ -105,40 +103,37 @@
       <div class="container">
         <div class="row mb-4">
           <div class="col-md-6">
-            <h1>Contact</h1>
+            <h1>Kapcsolat</h1>
           </div>
         </div>
         <div class="row blog-entries">
           <div class="col-md-12 col-lg-8 main-content">
-            
-            <form action="#" method="post">
+
+            <form name="kapcsolat" action="php/kapcsolat.php" onsubmit="return ellenoriz();" method="post">
                   <div class="row">
                     <div class="col-md-4 form-group">
-                      <label for="name">Name</label>
-                      <input type="text" id="name" class="form-control ">
-                    </div>
-                    <div class="col-md-4 form-group">
-                      <label for="phone">Phone</label>
-                      <input type="text" id="phone" class="form-control ">
+                      <label for="name">Név</label>
+                      <input type="text" id="nev" name="nev" class="form-control ">
                     </div>
                     <div class="col-md-4 form-group">
                       <label for="email">Email</label>
-                      <input type="email" id="email" class="form-control ">
+                      <input type="email" id="email" name="email" class="form-control ">
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12 form-group">
-                      <label for="message">Write Message</label>
-                      <textarea name="message" id="message" class="form-control " cols="30" rows="8"></textarea>
+                      <label for="message">Üzenet</label>
+                      <textarea name="szoveg" id="szoveg" class="form-control " cols="30" rows="8"></textarea>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6 form-group">
-                      <input type="submit" value="Send Message" class="btn btn-primary">
+                      <input id="kuld" type="submit" value="Küld" class="btn btn-primary">
+                      <button onclick="ellenoriz();" type="button" class="btn btn-primary">Ellenőriz</button>
                     </div>
                   </div>
                 </form>
-            
+
 
           </div>
 
@@ -170,7 +165,7 @@
                 </div>
               </div>
             </div>
-            <!-- END sidebar-box -->  
+            <!-- END sidebar-box -->
             <div class="sidebar-box">
               <h3 class="heading">Popular Posts</h3>
               <div class="post-entry-sidebar">
@@ -251,87 +246,29 @@
         </div>
       </div>
     </section>
-  
-    <footer class="site-footer">
+
+    <footer class="site-footer" style="background:red">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-4">
-            <h3>Paragraph</h3>
-            <p>
-              <img src="images/img_1.jpg" alt="Image placeholder" class="img-fluid">
-            </p>
+            <h3>A Vöröskereszt Mozgalom</h3>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, accusantium optio unde perferendis eum illum voluptatibus dolore tempora, consequatur minus asperiores temporibus reprehenderit.</p>
+            <p>1859. Solferino. A háború áldozatainak megkülönböztetés nélküli, intézményes nemzetközi védelme a XIX. század második felében vált megvalósítható és mozgósító programmá. A történelmileg szükségszerű lépést az 1859-ben lezajlott Solferinói csata ösztönözte. Az ütközet, amely az osztrák és az egyesített francia-szárd haderők között zajlott, óriási áldozatokat követelt.</p>
           </div>
           <div class="col-md-6 ml-auto">
             <div class="row">
-              <div class="col-md-7">
-                <h3>Latest Post</h3>
-                <div class="post-entry-sidebar">
-                <ul>
-                    <li>
-                      <a href="">
-                        <img src="images/img_6.jpg" alt="Image placeholder" class="mr-4">
-                        <div class="text">
-                          <h4>There’s a Cool New Way for Men to Wear Socks and Sandals</h4>
-                          <div class="post-meta">
-                            <span class="mr-2">March 15, 2018 </span> &bullet;
-                            <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="">
-                        <img src="images/img_3.jpg" alt="Image placeholder" class="mr-4">
-                        <div class="text">
-                          <h4>There’s a Cool New Way for Men to Wear Socks and Sandals</h4>
-                          <div class="post-meta">
-                            <span class="mr-2">March 15, 2018 </span> &bullet;
-                            <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="">
-                        <img src="images/img_4.jpg" alt="Image placeholder" class="mr-4">
-                        <div class="text">
-                          <h4>There’s a Cool New Way for Men to Wear Socks and Sandals</h4>
-                          <div class="post-meta">
-                            <span class="mr-2">March 15, 2018 </span> &bullet;
-                            <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
-              </div>
-              </div>
+
               <div class="col-md-1"></div>
-              
+
               <div class="col-md-4">
 
                 <div class="mb-5">
-                  <h3>Quick Links</h3>
-                  <ul class="list-unstyled">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Travel</a></li>
-                    <li><a href="#">Adventure</a></li>
-                    <li><a href="#">Courses</a></li>
-                    <li><a href="#">Categories</a></li>
-                  </ul>
-                </div>
-                
-                <div class="mb-5">
-                  <h3>Social</h3>
+                  <h3>Közösségi oldalak</h3>
                   <ul class="list-unstyled footer-social">
-                    <li><a href="#"><span class="fa fa-twitter"></span> Twitter</a></li>
-                    <li><a href="#"><span class="fa fa-facebook"></span> Facebook</a></li>
-                    <li><a href="#"><span class="fa fa-instagram"></span> Instagram</a></li>
-                    <li><a href="#"><span class="fa fa-vimeo"></span> Vimeo</a></li>
-                    <li><a href="#"><span class="fa fa-youtube-play"></span> Youtube</a></li>
-                    <li><a href="#"><span class="fa fa-snapchat"></span> Snapshot</a></li>
+                    <a href="https://twitter.com/mvoroskereszt"><span class="fa fa-twitter"></span></a>
+                    <a href="https://www.facebook.com/magyarvoroskereszt"><span class="fa fa-facebook"></span></a>
+                    <a href="https://www.instagram.com/voroskereszt_hunredcross/"><span class="fa fa-instagram"></span></a>
+                    <a href="https://www.youtube.com/user/HungarianRedCross/"><span class="fa fa-youtube-play"></span></a>
                   </ul>
                 </div>
               </div>
@@ -341,14 +278,14 @@
         <div class="row">
           <div class="col-md-12">
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
           </div>
         </div>
       </div>
     </footer>
     <!-- END footer -->
-    
+
     <!-- loader -->
     <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
 
@@ -360,7 +297,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
 
-    
+
     <script src="js/main.js"></script>
   </body>
 </html>
