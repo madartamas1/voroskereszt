@@ -29,7 +29,7 @@
 ?><!doctype html>
 <html lang="en">
   <head>
-    <title>Colorlib Balita &mdash; Minimal Blog Template</title>
+    <title>Magyar Vöröskereszt&mdash; Képek feltöltése</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -91,7 +91,7 @@
           <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="index.html">Kezdőlap</a>
+                <a class="nav-link" href="index.html">Kezdőlap</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Adományozás</a>
@@ -116,7 +116,7 @@
                 <a class="nav-link" href="mediat.php">Médiatár</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="mediat_feltolt.php">Képek feltöltése</a>
+                <a class="nav-link active" href="mediat_feltolt.php">Képek feltöltése</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Kapcsolat</a>

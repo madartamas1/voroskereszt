@@ -1,25 +1,7 @@
-<?php
-    // Alkalmazás logika:
-    include('config.inc.php');
-
-    // adatok összegyűjtése:
-    $kepek = array();
-    $olvaso = opendir($MAPPA);
-    while (($fajl = readdir($olvaso)) !== false) {
-        if (is_file($MAPPA.$fajl)) {
-            $vege = strtolower(substr($fajl, strlen($fajl)-4));
-            if (in_array($vege, $TIPUSOK)) {
-                $kepek[$fajl] = filemtime($MAPPA.$fajl);
-            }
-        }
-    }
-    closedir($olvaso);
-
-    // Megjelenítés logika:
-?><!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
-    <title>Magyar Vöröskereszt&mdash; Médiatár</title>
+    <title>Colorlib Balita &mdash; Minimal Blog Template</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -35,12 +17,6 @@
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
-
-    <style type="text/css">
-        div#galeria {margin: 0 auto; width: 620px;}
-        div.kep { display: inline-block; }
-        div.kep img { width: 200px; }
-    </style>
   </head>
   <body>
 
@@ -86,7 +62,7 @@
                 <a class="nav-link" href="index.html">Kezdőlap</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Adományozás</a>
+                <a class="nav-link dropdown-toggle active" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Adományozás</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
                   <a class="dropdown-item" href="kampany_tamogat.html">Kampány támogatása</a>
                   <a class="dropdown-item" href="#">Szervezet támogatása</a>
@@ -105,7 +81,7 @@
 
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="mediat.php">Médiatár</a>
+                <a class="nav-link" href="mediat.php">Médiatár</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="mediat_feltolt.php">Képek feltöltése</a>
@@ -121,28 +97,52 @@
     </header>
     <!-- END header -->
 
-    <section class="site-section py-lg">
-      <div id="galeria">
-      <h1>Galéria</h1>
-      <?php
-      arsort($kepek);
-      foreach($kepek as $fajl => $datum)
-      {
-      ?>
-          <div class="kep">
-              <a href="<?php echo $MAPPA.$fajl ?>">
-                  <img src="<?php echo $MAPPA.$fajl ?>">
-              </a>
-              <p>Név:  <?php echo $fajl; ?></p>
-              <p>Dátum:  <?php echo date($DATUMFORMA, $datum); ?></p>
-          </div>
-      <?php
-      }
-      ?>
-      </div>
-    </section>
 
     <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="mb-3 ">Támogatható kampányaink</h2>
+            <h5> Válaszd ki a számodra fontos területet, hogy együtt gyors és hathatós segítséget tudjunk nyújtani az arra rászorulóknak! </h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <a href="#" class="a-block d-flex align-items-center height-md" style="background-image: url('images/balaton_sny.jpg'); ">
+              <div class="text">
+                <div class="post-meta">
+                  <span class="category">EDDIGI FELAJÁNLÁSOK: 28.700 Ft</span>
+                  <span class="mr-2">TÁMOGATÓK: 12</span> &bullet;
+                </div>
+                <h3>Balatoni Elsősegélynyújtó Szolgálat</h3>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="#" class="a-block d-flex align-items-center height-md" style="background-image: url('images/tabor.png'); ">
+              <div class="text">
+                <div class="post-meta">
+                  <span class="category">EDDIGI FELAJÁNLÁSOK: 102.717 Ft</span>
+                  <span class="mr-2">TÁMOGATÓK: 2</span> &bullet;
+                </div>
+                <h3>Hétcsoda Élménytábor</h3>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="#" class="a-block d-flex align-items-center height-md" style="background-image: url('images/sziv.jpg'); ">
+              <div class="text">
+                <div class="post-meta">
+                  <span class="category">EDDIGI FELAJÁNLÁSOK 998.312 Ft</span>
+                  <span class="mr-2">TÁMOGATÓK: 172</span> &bullet;
+                </div>
+                <h3>Működjünk együtt!</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
 
     </section>
     <!-- END section -->
